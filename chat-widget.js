@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Configuration
-  const API_URL = 'http://localhost:8000/chat';
+  const API_URL = 'https://spilia-chatbot-821930721682.europe-west1.run.app/chat';
   const TENANT_ID = 'spilia_retreat'; 
 
   const chatToggle = document.getElementById('chat-toggle');

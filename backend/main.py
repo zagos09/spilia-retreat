@@ -14,7 +14,7 @@ app = FastAPI(title="Spilia Retreat AI Chat Backend (Multi-Tenant)")
 # Add CORS to allow requests from the frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # For production, replace with frontend domain
+    allow_origins=["https://zagos09.github.io", "http://localhost:8000", "http://127.0.0.1:8000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
