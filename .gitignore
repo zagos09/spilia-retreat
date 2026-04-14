@@ -1,1 +1,4 @@
 *.DS_Store\nThumbs.db
+.venv/
+__pycache__/
+*.pyc
