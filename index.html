@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spilia Retreat — Luxury Villa, Sifnos, Greece</title>
+  <meta name="description" content="Spilia Retreat is a luxury beachfront villa in Kamares, Sifnos, Greece. Direct sea access, private terraces, and panoramic Aegean views. Book direct for the best rates." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── NAV ─── -->
+  <nav class="nav" id="main-nav">
+    <div class="nav__logo">
+      <span class="nav__logo-main">Spilia</span>
+      <span class="nav__logo-sub">Retreat · Sifnos</span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#rooms">Rooms</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#amenities">Amenities</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#book" class="btn btn--ghost nav__cta">Book Direct</a>
+    <button class="nav__burger" id="nav-burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ─── MOBILE MENU ─── -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu__close" id="mobile-close">&#x2715;</button>
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#rooms" class="mobile-link">Rooms</a></li>
+      <li><a href="#gallery" class="mobile-link">Gallery</a></li>
+      <li><a href="#amenities" class="mobile-link">Amenities</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+      <li><a href="#book" class="mobile-link btn btn--primary" style="margin-top:1rem;display:inline-block;">Book Direct</a></li>
+    </ul>
+  </div>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="home">
+    <div class="hero__bg" style="background-image: url('images/photo-hero.jpg');"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content" data-reveal>
+      <p class="hero__eyebrow">Kamares, Sifnos — Greece</p>
+      <h1 class="hero__title">Where the Aegean<br /><em>meets your doorstep</em></h1>
+      <p class="hero__sub">A private beachfront retreat built into the rocky coastline of Sifnos.<br/>Direct sea access · Private terraces · Panoramic views · Yours alone.</p>
+      <div class="hero__actions">
+        <a href="#book" class="btn btn--primary" id="hero-book-btn">Reserve Your Stay</a>
+        <a href="#about" class="btn btn--outline">Discover Spilia</a>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+    <div class="hero__badge">
+      <span class="hero__badge-score">9.7</span>
+      <span class="hero__badge-label">Exceptional<br/><small>27 reviews</small></span>
+    </div>
+  </section>
+
+  <!-- ─── STRIP ─── -->
+  <div class="strip">
+    <div class="strip__item"><span class="strip__icon">&#9734;</span> Beachfront</div>
+    <div class="strip__divider"></div>
+    <div class="strip__item"><span class="strip__icon">&#9729;</span> Direct Sea Access</div>
+    <div class="strip__divider"></div>
+    <div class="strip__item"><span class="strip__icon">&#9829;</span> Rated 10 by Couples</div>
+    <div class="strip__divider"></div>
+    <div class="strip__item"><span class="strip__icon">&#9728;</span> Aegean Sea Views</div>
+  </div>
+
+  <!-- ─── ABOUT ─── -->
+  <section class="about section" id="about">
+    <div class="about__grid">
+      <div class="about__images">
+        <div class="about__img-main" data-reveal>
+          <!-- Real photo: Villa terrace with 2 chairs, wine glasses, panoramic sea bay view -->
+          <img src="images/photo-bathroom.jpg"
+               alt="Private terrace at Spilia Retreat — two chairs, white wine, panoramic view of the Aegean bay" />
+        </div>
+        <div class="about__img-secondary">
+          <!-- Real photo: Cycladic entrance steps, hibiscus flowers, rocky mountain backdrop -->
+          <div class="about__img-side" data-reveal data-reveal-delay="2">
+            <img src="images/photo-architecture.jpg"
+                 alt="Spilia Retreat entrance — whitewashed Cycladic steps with Mediterranean flowers" />
+          </div>
+          <div class="about__stat-card" data-reveal data-reveal-delay="3">
+            <p class="about__stat-num">300m</p>
+            <p class="about__stat-label">from Kamares Beach</p>
+            <p class="about__stat-sub">Top-rated 8.8</p>
+          </div>
+        </div>
+      </div>
+      <div class="about__text" data-reveal>
+        <p class="section__eyebrow">Our Story</p>
+        <h2 class="section__title">A Retreat Built<br/>Into the Coastline</h2>
+        <p class="about__body">Spilia Retreat is not a hotel. It is a private collection of villas carved into the ancient rocks above the crystal-clear bay of Kamares — where the only boundary between you and the Aegean is a whitewashed stone wall and infinity of blue.</p>
+        <p class="about__body">The property is deliberately intimate. Minimalist Cycladic architecture, private terraces with direct sea views, and spaces designed for two people or a close-knit group who want the island entirely to themselves.</p>
+        <p class="about__body">Three minutes from Kamares Beach, rated among the finest in the Cyclades, and yet utterly secluded — Spilia is the contradiction Sifnos does best.</p>
+        <div class="about__highlights">
+          <div class="about__highlight-item">
+            <div class="about__highlight-icon">&#9670;</div>
+            <span>Exceptional Location — rated 10 by couples</span>
+          </div>
+          <div class="about__highlight-item">
+            <div class="about__highlight-icon">&#9670;</div>
+            <span>4-star beachfront villa · Kamares, Sifnos 84003</span>
+          </div>
+          <div class="about__highlight-item">
+            <div class="about__highlight-icon">&#9670;</div>
+            <span>Personal host Alex — meets you at the port</span>
+          </div>
+          <div class="about__highlight-item">
+            <div class="about__highlight-icon">&#9670;</div>
+            <span>14 km from Chrisopigi Monastery · Scuba diving nearby</span>
+          </div>
+        </div>
+        <blockquote class="about__quote">
+          "We had a wonderful stay at Spilia Retreat — peaceful, spotless, and with the most beautiful sea views. Alex met us at the port and couldn't have been more welcoming."
+          <cite>— Sam, United Kingdom</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ROOMS ─── -->
+  <section class="rooms section section--sand" id="rooms">
+    <div class="container">
+      <div class="section__header" data-reveal>
+        <p class="section__eyebrow">Accommodations</p>
+        <h2 class="section__title">Rooms &amp; Suites</h2>
+        <p class="section__lead">Two distinct villas — each one a private world, with the sea as your constant companion.</p>
+      </div>
+      <div class="rooms__grid">
+
+        <!-- Room 1: Beachfront Villa -->
+        <article class="room-card" id="room-beachfront" data-reveal>
+          <div class="room-card__img-wrap">
+            <!-- Real photo: private terrace sun-lounger, open sea & mountains view -->
+            <img src="images/photo-pool.jpg"
+                 alt="Spilia Retreat terrace — private sun lounger with unobstructed Aegean sea view" />
+            <div class="room-card__badge">Sleeps 6</div>
+          </div>
+          <div class="room-card__body">
+            <div class="room-card__meta">
+              <span class="room-card__type">Villa</span>
+              <span class="room-card__sep">·</span>
+              <span class="room-card__beds">3 Bedrooms</span>
+            </div>
+            <h3 class="room-card__title">Villa — Beach Front</h3>
+            <p class="room-card__desc">The flagship accommodation at Spilia. This generous three-bedroom villa wraps around the rocky shoreline, offering direct sightlines to the open Aegean from every terrace. Perfect for families or groups sharing a once-in-a-lifetime island retreat.</p>
+            <ul class="room-card__features">
+              <li>Bedroom 1 &amp; 3 — king-size bed</li>
+              <li>Bedroom 2 — two single beds</li>
+              <li>Private terrace with direct sea view</li>
+              <li>Kitchenette, A/C, Netflix, bathrobes &amp; slippers</li>
+            </ul>
+            <a href="#book" class="btn btn--primary room-card__cta">Check Availability</a>
+          </div>
+        </article>
+
+        <!-- Room 2: One-Bedroom Villa -->
+        <article class="room-card" id="room-one-bed" data-reveal data-reveal-delay="2">
+          <div class="room-card__img-wrap">
+            <!-- Real photo: villa terrace with 2 chairs, wine glasses, sea & mountain bay view -->
+            <img src="images/photo-bathroom.jpg"
+                 alt="One-Bedroom Villa private terrace — two chairs, wine, and Kamares bay view" />
+            <div class="room-card__badge">Sleeps 2</div>
+          </div>
+          <div class="room-card__body">
+            <div class="room-card__meta">
+              <span class="room-card__type">Villa</span>
+              <span class="room-card__sep">·</span>
+              <span class="room-card__beds">1 Bedroom</span>
+            </div>
+            <h3 class="room-card__title">One-Bedroom Villa</h3>
+            <p class="room-card__desc">An exquisite sanctuary for two. Open the doors of your private terrace to a panoramic view of the bay framed by ancient peaks — the same view you'll share over a glass of local white wine as the sun descends into the Aegean.</p>
+            <ul class="room-card__features">
+              <li>Extra-large double bed</li>
+              <li>Private terrace with panoramic bay view</li>
+              <li>Kitchenette &amp; fully equipped bathroom</li>
+              <li>Pool towels, beach chairs &amp; sun loungers</li>
+            </ul>
+            <a href="#book" class="btn btn--primary room-card__cta">Check Availability</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── GALLERY ─── -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section__header" data-reveal>
+        <p class="section__eyebrow">The Property</p>
+        <h2 class="section__title">A Place Like No Other</h2>
+        <p class="section__lead">Few places in the Cyclades are built so close to the sea. These are real photographs from Spilia Retreat.</p>
+      </div>
+    </div>
+    <div class="gallery__grid">
+      <!-- Real photo 1: Hero exterior / villa + sea + mountains -->
+      <div class="gallery__item gallery__item--wide" data-reveal>
+        <img src="images/photo-hero.jpg"
+             alt="Spilia Retreat exterior — white Cycladic villa clinging to the rocky coastline above the turquoise Aegean" />
+        <div class="gallery__caption">The Villa · Kamares Coastline</div>
+      </div>
+      <!-- Real photo 2: Aerial drone top-down shot in daylight -->
+      <div class="gallery__item" data-reveal data-reveal-delay="1">
+        <img src="images/photo-exterior.jpg"
+             alt="Aerial view of Spilia Retreat — villa directly above crystal-clear turquoise sea" />
+        <div class="gallery__caption">Aerial · Direct Sea Access</div>
+      </div>
+      <!-- Real photo 3: Purple/gold sunset sky, villa beside sea -->
+      <div class="gallery__item" data-reveal data-reveal-delay="2">
+        <img src="images/photo-terrace.jpg"
+             alt="Spilia Retreat at sunset — villa illuminated against a purple and gold sky above the Aegean sea" />
+        <div class="gallery__caption">Sunset · Golden Hour</div>
+      </div>
+      <!-- Real photo 4: Aerial dusk shot of villa, lights on, sea below -->
+      <div class="gallery__item" data-reveal data-reveal-delay="1">
+        <img src="images/photo-bedroom.jpg"
+             alt="Spilia Retreat aerial dusk view — villa lights glow above the calm Aegean" />
+        <div class="gallery__caption">Dusk · The Villa from Above</div>
+      </div>
+      <!-- Real photo 5: Iron gate / entrance detail -->
+      <div class="gallery__item" data-reveal data-reveal-delay="2">
+        <img src="images/photo-kitchen.jpg"
+             alt="Spilia Retreat entrance gate — handcrafted iron gate with natural grasses and stone wall" />
+        <div class="gallery__caption">The Entrance · Cycladic Craft</div>
+      </div>
+      <!-- Real photo 6: Cycladic stairs with hibiscus -->
+      <div class="gallery__item gallery__item--tall" data-reveal data-reveal-delay="3">
+        <img src="images/photo-architecture.jpg"
+             alt="Spilia Retreat whitewashed exterior stairs with red hibiscus flowers and dry grasses" />
+        <div class="gallery__caption">Architecture · Cycladic Detail</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── AMENITIES ─── -->
+  <section class="amenities section section--offwhite" id="amenities">
+    <div class="container">
+      <div class="section__header" data-reveal>
+        <p class="section__eyebrow">What's Included</p>
+        <h2 class="section__title">Amenities</h2>
+        <p class="section__lead">Every detail at Spilia Retreat is considered — from your first morning coffee with a sea view to the last glow of evening on the terrace.</p>
+      </div>
+      <div class="amenities__grid">
+
+        <div class="amenity-card" id="amenity-sea" data-reveal>
+          <div class="amenity-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 18 C5 14 7 14 9 16 C11 18 13 18 15 16 C17 14 19 14 21 16"/><path d="M3 12 C5 8 7 8 9 10 C11 12 13 12 15 10 C17 8 19 8 21 10"/><path d="M12 3v4M8 5l4-2 4 2"/></svg>
+          </div>
+          <h4 class="amenity-card__title">Direct Sea Access</h4>
+          <p class="amenity-card__desc">The villa sits directly above the ocean. Step outside and you are on the rocks with the Aegean at your feet — no beach crowds, no queues.</p>
+        </div>
+
+        <div class="amenity-card" id="amenity-beach" data-reveal data-reveal-delay="1">
+          <div class="amenity-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 18h20"/><path d="M6 18V10l6-7 6 7v8"/><circle cx="12" cy="8" r="1" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <h4 class="amenity-card__title">Kamares Beach · 300m</h4>
+          <p class="amenity-card__desc">Top-rated Kamares Beach (8.8) is 300 metres and a 3-minute walk away. Beach chairs and pool towels are provided for you.</p>
+        </div>
+
+        <div class="amenity-card" id="amenity-terrace" data-reveal data-reveal-delay="2">
+          <div class="amenity-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="10" width="18" height="4" rx="1"/><path d="M5 10V6M19 10V6M3 14v4M21 14v4M8 14v4M16 14v4"/></svg>
+          </div>
+          <h4 class="amenity-card__title">Private Terrace</h4>
+          <p class="amenity-card__desc">Every accommodation has its own terrace with unobstructed sea and mountain views — ideal for sunrise coffee or an evening aperitivo.</p>
+        </div>
+
+        <div class="amenity-card" id="amenity-wifi" data-reveal data-reveal-delay="3">
+          <div class="amenity-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <h4 class="amenity-card__title">Free WiFi + Netflix</h4>
+          <p class="amenity-card__desc">High-speed wireless internet throughout all areas plus Netflix streaming — for those rare moments when the sea isn't entertainment enough.</p>
+        </div>
+
+        <div class="amenity-card" id="amenity-ac" data-reveal>
+          <div class="amenity-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M12 17v4M8 17v4M16 17v4"/><path d="M7 12l2-2 2 2 2-2 2 2"/></svg>
+          </div>
+          <h4 class="amenity-card__title">Air Conditioning</h4>
+          <p class="amenity-card__desc">Individual climate control in every room to keep you cool and comfortable throughout the warm Mediterranean summer months.</p>
+        </div>
+
+        <div class="amenity-card" id="amenity-kitchen" data-reveal data-reveal-delay="1">
+          <div class="amenity-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 3v4M16 3v4M2 7h20"/><circle cx="8" cy="14" r="2"/><path d="M14 12h4M14 16h4"/></svg>
+          </div>
+          <h4 class="amenity-card__title">Private Kitchenette</h4>
+          <p class="amenity-card__desc">Fully equipped kitchenette in each accommodation — stock up at the Kamares market and make your stay entirely your own.</p>
+        </div>
+
+        <div class="amenity-card" id="amenity-bath" data-reveal data-reveal-delay="2">
+          <div class="amenity-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16v5a4 4 0 01-4 4H8a4 4 0 01-4-4v-5z"/><path d="M6 12V5a2 2 0 012-2h1"/></svg>
+          </div>
+          <h4 class="amenity-card__title">Luxury Bathroom</h4>
+          <p class="amenity-card__desc">Premium free toiletries, plush bathrobes, slippers and hairdryer. A private bathroom that feels like a small indulgence every time.</p>
+        </div>
+
+        <div class="amenity-card" id="amenity-host" data-reveal data-reveal-delay="3">
+          <div class="amenity-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          </div>
+          <h4 class="amenity-card__title">Personal Host — Alex</h4>
+          <p class="amenity-card__desc">Your host Alex will meet you at Kamares port on arrival. He knows every corner of Sifnos and is available throughout your stay for any need.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── BOOK DIRECT ─── -->
+  <section class="book section section--dark" id="book">
+    <!-- Real photo: villa at golden/purple sunset -->
+    <div class="book__bg" style="background-image: url('images/photo-terrace.jpg');"></div>
+    <div class="book__overlay"></div>
+    <div class="container book__content">
+      <p class="section__eyebrow book__eyebrow" data-reveal>Best Rate Guaranteed</p>
+      <h2 class="book__title" data-reveal>Book Direct &amp;<br/>Experience More</h2>
+      <p class="book__sub" data-reveal>Reserve directly with us for the best available rates, a personal welcome from Alex at Kamares port, and exclusive touches available only when you book with us.</p>
+      <div class="book__form" id="book-form" data-reveal>
+        <div class="book__field">
+          <label for="check-in">Check-in</label>
+          <input type="date" id="check-in" name="check-in" />
+        </div>
+        <div class="book__field">
+          <label for="check-out">Check-out</label>
+          <input type="date" id="check-out" name="check-out" />
+        </div>
+        <div class="book__field">
+          <label for="villa-type">Villa</label>
+          <select id="villa-type" name="villa-type">
+            <option value="beachfront">Beachfront Villa (6 guests)</option>
+            <option value="onebedroom">One-Bedroom Villa (2 guests)</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn--primary book__submit" id="check-availability-btn">Check Availability</button>
+      </div>
+      <p class="book__contact">Questions? <a href="mailto:hello@spiliaretreat.gr">hello@spiliaretreat.gr</a> &nbsp;·&nbsp; <a href="tel:+302284033100">+30 228 403 3100</a></p>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer" id="contact">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__logo">Spilia Retreat</p>
+        <p class="footer__tagline">A private beachfront sanctuary<br/>on the rocky shores of Sifnos, Greece.<br/><br/>Kamares, Sifnos 84003, Greece.</p>
+        <div class="footer__socials">
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <h5 class="footer__col-title">Navigate</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#rooms">Rooms &amp; Suites</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#book">Book Direct</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h5 class="footer__col-title">Explore Sifnos</h5>
+        <ul>
+          <li><a href="#contact">Kamares Beach</a></li>
+          <li><a href="#contact">Chrisopigi Monastery</a></li>
+          <li><a href="#contact">Apollonia Village</a></li>
+          <li><a href="#contact">Scuba Diving</a></li>
+          <li><a href="#contact">Local Dining</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h5 class="footer__col-title">Get in Touch</h5>
+        <p><a href="mailto:hello@spiliaretreat.gr">hello@spiliaretreat.gr</a></p>
+        <p><a href="tel:+302284033100">+30 228 403 3100</a></p>
+        <p class="footer__hours">Daily · 8:00 – 21:00 EEST</p>
+        <div class="footer__review">
+          <span class="footer__review-score">9.7</span>
+          <div>
+            <span class="footer__review-label">Exceptional</span>
+            <span class="footer__review-count">27 guest reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2025 Spilia Retreat. All rights reserved. · Kamares, Sifnos, Greece · <a href="https://www.booking.com/hotel/gr/spilia-retreat.en-gb.html" target="_blank" rel="noopener">View on Booking.com</a></p>
+    </div>
+  </footer>
+
+  <!-- ─── LIGHTBOX ─── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close">&#x2715;</button>
+    <button class="lightbox__prev" id="lightbox-prev" aria-label="Previous">&#8592;</button>
+    <button class="lightbox__next" id="lightbox-next" aria-label="Next">&#8594;</button>
+    <div class="lightbox__img-wrap">
+      <img id="lightbox-img" src="" alt="" />
+    </div>
+    <p class="lightbox__caption" id="lightbox-caption"></p>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
