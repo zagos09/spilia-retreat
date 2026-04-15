@@ -1,18 +1,26 @@
-/* ─── NAV SCROLL ─── */
-const nav = document.getElementById('main-nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 60);
-}, { passive: true });
-
-/* ─── MOBILE MENU ─── */
+/* ─── MOBILE MENU (bottom nav burger) ─── */
 const burger = document.getElementById('nav-burger');
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileClose = document.getElementById('mobile-close');
 const mobileLinks = document.querySelectorAll('.mobile-link');
 
-burger.addEventListener('click', () => mobileMenu.classList.add('open'));
-mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+burger?.addEventListener('click', () => mobileMenu.classList.add('open'));
+mobileClose?.addEventListener('click', () => mobileMenu.classList.remove('open'));
 mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+/* ─── ACTIVE NAV STATE (bottom nav) ─── */
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.bottom-nav__links a');
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.classList.toggle('nav-active', link.getAttribute('href') === `#${entry.target.id}`);
+      });
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+sections.forEach(s => sectionObserver.observe(s));
 
 /* ─── SCROLL REVEAL ─── */
 const revealEls = document.querySelectorAll('[data-reveal]');
@@ -23,7 +31,7 @@ const revealObserver = new IntersectionObserver((entries) => {
       revealObserver.unobserve(e.target);
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 revealEls.forEach(el => revealObserver.observe(el));
 
 /* ─── LIGHTBOX ─── */
@@ -33,19 +41,24 @@ const lightboxCaption = document.getElementById('lightbox-caption');
 const lightboxClose = document.getElementById('lightbox-close');
 const lightboxPrev = document.getElementById('lightbox-prev');
 const lightboxNext = document.getElementById('lightbox-next');
-const galleryItems = document.querySelectorAll('.gallery__item');
+
+// Collect both panel images and thumbnails
+const galleryImgs = document.querySelectorAll('.gallery-panel__img img, .gallery__thumb img');
 
 let currentLightboxIndex = 0;
 const galleryData = [];
 
-galleryItems.forEach((item, i) => {
-  const img = item.querySelector('img');
-  const cap = item.querySelector('.gallery__caption');
-  if (img) {
-    galleryData.push({ src: img.src, alt: img.alt, caption: cap ? cap.textContent : '' });
-    item.addEventListener('click', () => openLightbox(i));
-    item.setAttribute('tabindex', '0');
-    item.addEventListener('keydown', (e) => { if (e.key === 'Enter') openLightbox(i); });
+galleryImgs.forEach((img, i) => {
+  const capEl = img.closest('.gallery-panel')?.querySelector('.gallery-panel__caption-title')
+             || img.closest('.gallery__thumb')?.querySelector('.gallery__caption');
+  galleryData.push({ src: img.src, alt: img.alt, caption: capEl ? capEl.textContent.trim() : '' });
+
+  const container = img.closest('.gallery-panel__img') || img.closest('.gallery__thumb');
+  if (container) {
+    container.style.cursor = 'pointer';
+    container.addEventListener('click', () => openLightbox(i));
+    container.setAttribute('tabindex', '0');
+    container.addEventListener('keydown', (e) => { if (e.key === 'Enter') openLightbox(i); });
   }
 });
 
@@ -78,14 +91,10 @@ function prevImage() {
   updateLightboxImage();
 }
 
-lightboxClose.addEventListener('click', closeLightbox);
-lightboxNext.addEventListener('click', nextImage);
-lightboxPrev.addEventListener('click', prevImage);
-
-lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) closeLightbox();
-});
-
+lightboxClose?.addEventListener('click', closeLightbox);
+lightboxNext?.addEventListener('click', nextImage);
+lightboxPrev?.addEventListener('click', prevImage);
+lightbox?.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', (e) => {
   if (!lightbox.classList.contains('active')) return;
   if (e.key === 'Escape') closeLightbox();
@@ -120,17 +129,3 @@ document.getElementById('check-availability-btn')?.addEventListener('click', () 
   }
   window.open('https://www.booking.com/hotel/gr/spilia-retreat.en-gb.html', '_blank', 'noopener,noreferrer');
 });
-
-/* ─── SMOOTH ACTIVE NAV STATE ─── */
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav__links a');
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(link => {
-        link.classList.toggle('nav-active', link.getAttribute('href') === `#${entry.target.id}`);
-      });
-    }
-  });
-}, { rootMargin: '-40% 0px -55% 0px' });
-sections.forEach(s => sectionObserver.observe(s));
